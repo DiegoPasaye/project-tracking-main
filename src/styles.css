@@ -21,6 +21,10 @@
     cursor: pointer;
 }
 .mobileContainer{
+    display: none;
+}
+.mobileContainer.active{
+    animation: mostrar 0.5s;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -32,7 +36,6 @@
     background-color: white;
     box-shadow: 0 0 20px -5px black;
     border-radius: 5px;
-    visibility: hidden;
 }
 .mobileContainer p{
     cursor: pointer;
@@ -213,5 +216,13 @@ h1{
     }
     .burger{
         display: none;
+    }
+}
+@keyframes mostrar{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

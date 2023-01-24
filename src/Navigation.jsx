@@ -5,16 +5,9 @@ import './styles.css'
 
 export const Navigation = () => {
     const mobileContainer = document.querySelector(".mobileContainer")
-    const [visible, setVisible] = useState(false)
-    const mostrar = () =>{
-        if(visible == false){
-            mobileContainer.style.visibility = "visible"
-            setVisible(visible = true)
-        }else{
-            mobileContainer.style.visibility = "hidden"
-            setVisible(visible = false)
-        }
-    }
+    const mostrar = () => {
+        document.querySelector(".mobileContainer").classList.toggle("active");
+      }
   return (
     <>
     <nav className='navigation'>
